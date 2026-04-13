@@ -1,0 +1,15 @@
+com\securevaultclient\model\FileMetadataModel.class
+com\securevaultclient\service\ApiService$2.class
+com\securevaultclient\model\AuditLogModel.class
+com\securevaultclient\util\AlertUtil.class
+com\securevaultclient\controller\DashboardController.class
+com\securevaultclient\util\SceneSwitcher.class
+com\securevaultclient\service\ApiService.class
+com\securevaultclient\controller\VerifyController$1.class
+com\securevaultclient\controller\AddFileController.class
+com\securevaultclient\MainApp.class
+com\securevaultclient\service\ApiService$1.class
+com\securevaultclient\controller\ViewFilesController.class
+com\securevaultclient\controller\LoginController.class
+com\securevaultclient\controller\AuditController.class
+com\securevaultclient\controller\VerifyController.class

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securevaultclient.controller.AddFileController">
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #27ae60;">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            
+            <Label text="Add File Metadata" textFill="white">
+                <font>
+                    <Font name="System Bold" size="20" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+    
+    <center>
+        <GridPane alignment="CENTER" hgap="15" vgap="15">
+            <padding>
+                <Insets bottom="30" left="30" right="30" top="30" />
+            </padding>
+            
+            <Label text="File Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+            <TextField fx:id="fileNameField" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="File Type:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+            <TextField fx:id="fileTypeField" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="e.g., pdf, doc, txt" />
+            
+            <Label text="File Size (bytes):" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+            <TextField fx:id="fileSizeField" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="e.g., 1024" />
+            
+            <Label text="Owner:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+            <TextField fx:id="ownerField" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="3" editable="false" />
+            
+            <HBox alignment="CENTER" spacing="20" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#handleSubmit" prefWidth="120" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Submit">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBack" prefWidth="120" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+            </HBox>
+        </GridPane>
+    </center>
+</BorderPane>

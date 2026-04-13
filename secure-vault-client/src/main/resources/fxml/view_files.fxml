@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securevaultclient.controller.ViewFilesController">
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #2980b9;">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            
+            <Label text="View Files" textFill="white">
+                <font>
+                    <Font name="System Bold" size="20" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            
+            <TableView fx:id="filesTable" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                    <TableColumn fx:id="fileNameColumn" prefWidth="200" text="File Name" />
+                    <TableColumn fx:id="ownerColumn" prefWidth="100" text="Owner" />
+                    <TableColumn fx:id="fileTypeColumn" prefWidth="80" text="Type" />
+                    <TableColumn fx:id="sizeColumn" prefWidth="100" text="Size (bytes)" />
+                    <TableColumn fx:id="uploadDateColumn" prefWidth="150" text="Upload Date" />
+                    <TableColumn fx:id="riskLevelColumn" prefWidth="80" text="Risk" />
+                </columns>
+            </TableView>
+            
+            <HBox alignment="CENTER" spacing="20">
+                <Button fx:id="refreshBtn" mnemonicParsing="false" onAction="#handleRefresh" prefWidth="120" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Refresh">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBack" prefWidth="120" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

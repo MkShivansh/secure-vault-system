@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securevaultclient.controller.VerifyController">
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #f39c12;">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            
+            <Label text="Verify File Integrity" textFill="white">
+                <font>
+                    <Font name="System Bold" size="20" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets bottom="30" left="30" right="30" top="30" />
+            </padding>
+            
+            <Label text="Select File to Verify:">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+            
+            <ComboBox fx:id="fileComboBox" prefWidth="400" promptText="Choose a file..." />
+            
+            <HBox alignment="CENTER" spacing="20">
+                <Button fx:id="verifyBtn" mnemonicParsing="false" onAction="#handleVerify" prefWidth="120" style="-fx-background-color: #f39c12; -fx-text-fill: white;" text="Verify">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+                
+                <Button fx:id="refreshBtn" mnemonicParsing="false" onAction="#handleRefresh" prefWidth="120" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Refresh">
+                    <font>
+                        <Font size="14" />
+                    </font>
+                </Button>
+            </HBox>
+            
+            <TextArea fx:id="resultArea" editable="false" prefHeight="150" prefWidth="400" promptText="Verification result will appear here..." wrapText="true" />
+            
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBack" prefWidth="120" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>
